@@ -1,13 +1,11 @@
+
 RewriteEngine On
-
-
 <IfModule mod_rewrite.c>
     Options -MultiViews
-    Options +FollowSymLinks
     RewriteEngine On
 
 	RewriteRule ^$ public/index.php [L]
-	RewriteRule ^((?!/).*)$ public/$1 [L,NC]
+	RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]

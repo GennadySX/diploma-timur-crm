@@ -12,5 +12,7 @@ class AbonentSeeder extends Seeder
     public function run()
     {
         //
+
+
     }
 }
