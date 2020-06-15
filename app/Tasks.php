@@ -9,8 +9,10 @@ class Tasks extends Model
     //
     protected $fillable = [
         'name',
-        'plan_cost',
+        'cost',
+        'priority',
+        'status',
+        'expire_date',
         'description',
-        'permissions',
     ];
 }

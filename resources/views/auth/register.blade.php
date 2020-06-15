@@ -13,14 +13,29 @@
 
                         <Register></Register>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Ваше ФИО</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Ваше имя</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required autocomplete="firstName" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Введите ваше ФИО (пр. Андрей Смирнов)</strong>
+                                        <strong>Введите ваше имя!</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Ваша фамилия</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('lastName') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}" required autocomplete="lastName" autofocus>
+
+                                @error('lastName')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>Введите вашу фамилию!</strong>
                                     </span>
                                 @enderror
                             </div>

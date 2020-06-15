@@ -8,7 +8,7 @@ read -p " enter commit message: " mess
 
 git add .
 
-git commit -m "maris-v50 -$d -pg  :$mess"
+git commit -m "TimCRM -$d -pg  :$mess"
 
 
 git push -u origin master

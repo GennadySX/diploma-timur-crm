@@ -9,8 +9,11 @@ class Chat extends Model
     //
 
     protected $fillable = [
-      'abonent_id',
-      'manager_id',
+      'user_f_id',
+      'user_s_id',
       'chat'
     ];
+
+
+
 }

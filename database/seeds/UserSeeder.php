@@ -12,8 +12,15 @@ class UserSeeder extends Seeder
     public function run(\App\User $user)
     {
         //
+        $user = new \App\User();
+        $user->fill([
+            'firstName'=> 'Timur',
+            'lastName'=> 'Zotov',
+            'email'=> 'admin@mail.com',
+            'password'=> bcrypt('adminPass'),
+        ])->save();
 
-      factory(\App\User::class, 4)->make();
+      factory(\App\User::class, 14)->create();
 
     }
 }

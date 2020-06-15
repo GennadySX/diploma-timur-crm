@@ -15,9 +15,10 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->text('executors')->nullable();
-            $table->foreignId('status_id')->nullable();
+            $table->foreignId('creator_id');
+            $table->float('cost')->default(0);
+            $table->enum('priority', ['a', 'b', 'c']);
+            $table->enum('status', ['s', 't', 'e', 'p'])->default('p');
             $table->date('expire_date')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();

@@ -8,8 +8,8 @@ class Tariff extends Model
 {
     //
     protected $fillable = [
-      'name',
-      'plan_cost',
+        'name',
+        'cost',
         'description',
         'permissions'
     ];

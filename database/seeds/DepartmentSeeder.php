@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Faker\Generator as Faker;
 class DepartmentSeeder extends Seeder
 {
     /**
@@ -9,8 +9,19 @@ class DepartmentSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         //
+
+        for ($i =1; $i < 10; $i++) {
+            $department = new \App\Department();
+            $department->fill([
+                'company_id' => $faker->numberBetween(1, 10),
+                'name' => $faker->streetName,
+                'address' => $faker->address,
+            ])->save();
+        }
+
+
     }
 }

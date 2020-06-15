@@ -13,16 +13,19 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        $this->call(UserSeed::class);
+        $this->call(UserSeeder::class);
         $this->call(FilesSeeder::class);
-        $this->call(ProfilerSeeder::class);
+        $this->call(TariffSeeder::class);
         $this->call(RoleSeeder::class);
         $this->call(CompanySeeder::class);
-        $this->call(DocumentSeeder::class);
         $this->call(DepartmentSeeder::class);
-        $this->call(AgreementsSeeder::class);
-        $this->call(ProfilerSeeder::class);
-        $this->call(ProfilerSeeder::class);
-        $this->call(ProfilerSeeder::class);
+        $this->call(DocumentSeeder::class);
+        $this->call(TasksSeeder::class);
+        $this->call(UserTaskSeeder::class);
+        $this->call(SubscriptionSeeder::class);
+        $this->call(FilesSeeder::class);
+        $this->call(EmployeeSeeder::class);
+        $this->call(ChatSeeder::class);
+        $this->call(EmailerSeeder::class);
     }
 }

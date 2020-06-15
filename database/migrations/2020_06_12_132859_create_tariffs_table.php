@@ -16,9 +16,9 @@ class CreateTariffsTable extends Migration
         Schema::create('tariffs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('plan_cost');
+            $table->float('cost');
             $table->text('description');
-            $table->text('permissions');
+            $table->text('permissions')->nullable();
             $table->timestamps();
         });
     }

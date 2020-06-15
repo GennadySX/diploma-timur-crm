@@ -10,4 +10,9 @@ export const componentList = [
         name: 'register',
         component: 'auth/register',
     },
+    {
+        name: 'profile',
+        component: 'admin/Profile/Profile',
+    },
+
 ]

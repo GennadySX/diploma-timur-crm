@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Faker\Generator as Faker;
 class SubscriptionSeeder extends Seeder
 {
     /**
@@ -9,8 +9,16 @@ class SubscriptionSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         //
+
+        for ($i = 1; $i<=10; $i++) {
+            $subscription = new \App\Subscription();
+            $subscription->fill([
+                'tariff_id' => $faker->numberBetween(1, 4),
+                'company_id'=> $i
+            ])->save();
+        }
     }
 }

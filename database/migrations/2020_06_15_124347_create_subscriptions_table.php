@@ -18,7 +18,7 @@ class CreateSubscriptionsTable extends Migration
             $table->date('start')->default(\Carbon\Carbon::now());
             $table->date('expired')->default(\Carbon\Carbon::now()->addMonth());
             $table->foreignId('tariff_id');
-            $table->foreignId('user_id');
+            $table->foreignId('company_id');
             $table->timestamps();
         });
     }

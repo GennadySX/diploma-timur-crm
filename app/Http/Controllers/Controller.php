@@ -18,4 +18,13 @@ class Controller extends BaseController
         return response()->json($args, $status_code);
     }
 
+
+    public function pager($component, $title=null, $search=false, $data=[])
+    {
+        $data['page'] = $component;
+        $data['search'] = $search;
+        if ($title && $title !== null) $data['title'] = $title;
+        return view('admin.index.index')->with($data);
+    }
+
 }

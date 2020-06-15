@@ -50,7 +50,7 @@
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                        aria-expanded="false">
                         @if(Auth::check())
-                            <img src="{{{ Auth::user()->avatar}}} " alt="">{{{  Auth::user()->name }}}
+                            <img src="{{{ Auth::user()->avatar}}} " alt="">{{{  Auth::user()->firstName }}} {{{  Auth::user()->lastName }}}
                         @endif
                         <span class=" fa fa-angle-down"></span>
                     </a>
