@@ -73,3 +73,7 @@ Route::group(['prefix' => '/home'], function () {
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

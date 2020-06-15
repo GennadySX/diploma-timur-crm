@@ -22,9 +22,6 @@
                 </div>
             </div>
             <div class="clearfix"></div>
-            <profile-index
-            profile_data="{{json_encode($profile)}}"
-            />
 
         </div>
     </div>
