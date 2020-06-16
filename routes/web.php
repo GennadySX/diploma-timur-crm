@@ -34,33 +34,6 @@ Route::group(['prefix' => '/home'], function () {
         Route::post('/update/avatar', 'CustomerController@updateAvatar');
     });
 
-    Route::group(['prefix' => '/repair'], function () {
-        Route::get('/', 'RepairController@index');
-        Route::get('/new', 'RepairController@new');
-        Route::post('/create', 'RepairController@create');
-        Route::get('/edit/{id}', 'RepairController@edit');
-        Route::post('/edit/{id}', 'RepairController@update');
-        Route::get('/delete/{id}', 'RepairController@destroy');
-    });
-
-    Route::group(['prefix' => '/ring'], function () {
-        Route::get('/', 'RingController@index');
-        Route::get('/new', 'RingController@new');
-        Route::post('/create', 'RingController@create');
-        Route::get('/edit/{id}', 'RingController@edit');
-        Route::post('/edit/{id}', 'RingController@update');
-        Route::get('/delete/{id}', 'RingController@destroy');
-    });
-
-    Route::group(['prefix' => '/sum'], function () {
-        Route::get('/', 'SumController@index');
-        Route::get('/new', 'SumController@new');
-        Route::post('/create', 'SumController@create');
-        Route::get('/edit/{id}', 'SumController@edit');
-        Route::post('/edit/{id}', 'SumController@update');
-        Route::get('/delete/{id}', 'SumController@destroy');
-    });
-
     Route::group(['prefix' => '/receipt'], function () {
         Route::get('/', 'ReceiptController@index');
         Route::get('/new', 'ReceiptController@new');

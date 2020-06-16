@@ -20,7 +20,7 @@ class UserTaskSeeder extends Seeder
                 'department_id' => $faker->numberBetween(1, 10),
                 'task_id' => $faker->numberBetween(1,14),
                 'executor_id' => $faker->numberBetween(2, 15),
-                'creator_id' => $faker->numberBetween(1, 5),
+                'creator_id' => $faker->numberBetween(1, 15),
                 'task_status' => $faker->randomElement(['s', 'e', 't', 'p']),
                 'description' => 'User task description '.$i
             ])->save();

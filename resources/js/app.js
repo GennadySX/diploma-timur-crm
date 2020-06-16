@@ -16,6 +16,8 @@ componentList.forEach(route => {
 })
 
 
+
+
 Vue.prototype.$bus = new Vue({})
 
 const app = new Vue({

@@ -11,9 +11,6 @@
                     <option value="ceo">Владелець компании</option>
                 </select>
             </div>
-
-
-
         </div>
     </div>
 </template>

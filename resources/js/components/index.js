@@ -11,6 +11,11 @@ export const componentList = [
         component: 'auth/register',
     },
     {
+        name: 'menubar',
+        component: 'admin/Layouts/Menu',
+    },
+
+    {
         name: 'profile',
         component: 'admin/Profile/Profile',
     },

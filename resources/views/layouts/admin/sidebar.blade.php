@@ -1,10 +1,9 @@
 <!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-    <div class="menu_section">
-        <h3>Меню</h3>
-@include('layouts.admin.menu')
-
-
+    <div id="app">
+        <menubar> </menubar>
+    </div>
+</div>
 <!-- /menu footer buttons -->
 <div class="sidebar-footer hidden-small">
     <a data-toggle="tooltip" data-placement="top" title="Settings" href="/dashboard/settings">
@@ -88,4 +87,4 @@
         </nav>
     </div>
 </div>
-<!-- /top navigation -->
+

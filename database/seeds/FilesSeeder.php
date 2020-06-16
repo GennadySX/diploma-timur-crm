@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Faker\Generator as Faker;
 class FilesSeeder extends Seeder
 {
     /**
@@ -9,22 +9,17 @@ class FilesSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         //
 
-
-
-
-
         for ($i = 1; $i<=50; $i++) {
-            $faker = new Faker\Generator();
 
             $is = $this->modelFigure($i);
 
             $file = new \App\Files();
             $file->fill([
-                'user_id'=> $i,
+                'user_id'=> $faker->numberBetween(1, 15),
                 'model_type' => $is['type'],
                 'model_id' => $is['id'],
                 'type'=> 'picture',
