@@ -1,17 +1,26 @@
 <template>
     <div >
         <div class="form-group row">
-            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Вы здесь?</label>
-
+            <label for="position-confirm" class="col-md-4 col-form-label text-md-right">Вы здесь?</label>
             <div class="col-md-6">
-                <select name="role" id="" class="form-control" required>
-                    <option value="">Выберите вашу должности</option>
+                <select name="role" id="position-confirm" class="form-control" v-model="position" required >
+                    <option value="0">Выберите вашу должности</option>
                     <option value="employee">Сотрудник</option>
                     <option value="client">Клиент компании</option>
                     <option value="ceo">Владелець компании</option>
                 </select>
             </div>
         </div>
+
+        <div v-if="position === 'employee' || position === 'client' " class="form-group row">
+            <label for="company" class="col-md-4 col-form-label text-md-right">Выберите компанию</label>
+            <div class="col-md-6">
+                <select name="role" id="company" class="form-control" required>
+                    <option :value="company.id" v-for="(company, index) in companyList" :key="index">{{company.name}}</option>
+                </select>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -22,23 +31,25 @@
         name: 'register',
         props: {},
         data() {
-            return {}
+            return {
+                companyList: null,
+                position: "0"
+            }
         },
         created() {
 
         },
         mounted() {
-
+            this.getCompanies()
         },
         updated() {
 
         },
         methods: {
-            getCompanyList() {
-                axios.get(API.companyList).then(res => {
-                    console.log('company list is', res)
-                })
-            }
+            getCompanies() {
+                axios.get(API.companyList).then(({data}) => this.companyList = data.list)
+            },
+
         }
     };
 </script>

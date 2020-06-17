@@ -44,6 +44,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapApiRoutes();
 
+        $this->xreq();
+
         $this->mapWebRoutes();
 
         //
@@ -70,6 +72,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    protected function xreq()
+    {
+        Route::prefix('x')
+            ->middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/xreq.php'));
+    }
+
     protected function mapApiRoutes()
     {
         Route::prefix('api')

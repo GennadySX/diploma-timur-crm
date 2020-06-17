@@ -14,10 +14,13 @@ export const componentList = [
         name: 'menubar',
         component: 'admin/Layouts/Menu',
     },
-
     {
         name: 'profile',
         component: 'admin/Profile/Profile',
+    },
+    {
+        name: 'profile-edit',
+        component: 'admin/Profile/ProfileEdit',
     },
 
 ]

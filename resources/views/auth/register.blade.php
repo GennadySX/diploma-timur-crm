@@ -11,12 +11,12 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <Register></Register>
+                        <register></register>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Ваше имя</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required autocomplete="firstName" autofocus>
+                                <input id="firstName" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required autocomplete="firstName" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">Ваша фамилия</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('lastName') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}" required autocomplete="lastName" autofocus>
+                                <input id="lastName" type="text" class="form-control @error('lastName') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}" required autocomplete="lastName" autofocus>
 
                                 @error('lastName')
                                 <span class="invalid-feedback" role="alert">
@@ -95,9 +95,3 @@
 @endsection
 
 
-<script>
-    import Register from "../../js/components/auth/register";
-    export default {
-        components: {Register}
-    }
-</script>

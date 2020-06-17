@@ -1,9 +1,13 @@
 
 export const API = {
-    origin: "/api",
-    login: '/api/login',
-    register: '/api/register',
+    origin: "/x",
+    login: '/x/login',
+    register: '/x/register',
+    companyList: '/x/register/companies',
 
-    companyList: '/api/companyList',
+    //with middleware
+    user: '/x/s/user',
+    userAvatar: '/x/s/user/update/avatar',
+
 
 }

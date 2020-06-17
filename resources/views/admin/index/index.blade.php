@@ -1,10 +1,10 @@
 @extends('layouts.admin')
-@section('content')
 
+@section('content')
 
     <!-- page content -->
     <div class="right_col" role="main">
-        <div class="">
+        <div  >
             <div class="page-title">
                 <div class="title_left">
                     @if(isset($title))
@@ -30,8 +30,6 @@
             @if(isset($page))
                         <?= "<".$page."></".$page.">"; ?>
                 @endif
-
-
         </div>
     </div>
 

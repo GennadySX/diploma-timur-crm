@@ -4034,7 +4034,6 @@
     utils_hooks__hooks.prototype             = momentPrototype;
 
     var _moment = utils_hooks__hooks;
-
     return _moment;
 
 }));

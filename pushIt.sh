@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+npm run prod
+
 d=`date +"%d-%m"`
 
 

@@ -23,13 +23,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/user', 'UserController@get');
 
 
 Route::group(['prefix' => '/home'], function () {
 
     Route::group(['prefix' => '/profile'], function () {
-        Route::get('/', 'CustomerController@index');
+        Route::get('/', 'UserController@profile');
         Route::post('/update', 'CustomerController@update');
         Route::post('/update/avatar', 'CustomerController@updateAvatar');
     });

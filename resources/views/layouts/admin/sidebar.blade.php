@@ -1,8 +1,8 @@
 <!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-    <div id="app">
+
         <menubar> </menubar>
-    </div>
+
 </div>
 <!-- /menu footer buttons -->
 <div class="sidebar-footer hidden-small">

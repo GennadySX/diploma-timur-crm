@@ -8,7 +8,7 @@
 </div>
 </div>
 
-<!-- jQuery -->
+<!-- Vue.JS -->
 <script src="{{asset('js/app.js')}}"></script>
 
 <!-- jQuery -->
@@ -54,6 +54,10 @@
 <script src="{{asset('admin/dash/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
 
 
+<!-- morris.js -->
+<script src="{{asset('admin/dash//vendors/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('admin/dash/vendors/morris.js/morris.min.js')}}"></script>
+
 
 
 <!-- Custom Theme Scripts -->
@@ -87,17 +91,7 @@
 
             alert(12312);
         });
-
-
-
-
     });
-
-
-
-
-
-
 </script>
 </body>
 </html>
