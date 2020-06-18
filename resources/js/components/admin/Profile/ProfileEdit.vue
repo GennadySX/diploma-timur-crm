@@ -45,12 +45,36 @@
 
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">ФИО <span
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="firstName">Имя <span
                                 class="required">* </span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required="required" name="CustomerFio"
-                                       class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="firstName" required="required" name="firstName"
+                                       class="form-control col-md-7 col-xs-12"
+                                    :value="profile_data.firstName"
+                                >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lastName">Фамилия <span
+                                class="required">* </span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="lastName" required="required" name="lastName"
+                                       class="form-control col-md-7 col-xs-12"
+                                       :value="profile_data.lastName"
+                                >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="middleName">Отчество <span
+                                class="required">* </span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="middleName" required="required" name="middleName"
+                                       class="form-control col-md-7 col-xs-12"
+                                       :value="profile_data.middleName"
+                                >
                             </div>
                         </div>
                         <div class="form-group">
@@ -59,66 +83,46 @@
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <span class="fa fa-at form-control-feedback right" aria-hidden="true"></span>
-                                <input type="tel" id="email" name="email" required="required"
+                                <input type="tel" id="email" name="email" disabled
                                        data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"
+                                       :value="profile_data.email"
                                 >
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="phone">Телефон<span class="required">*</span>
+                                   for="gender">Поль<span class="required"></span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                                <input type="tel" id="phone" name="Number" required="required"
-                                       data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"
+                                <select name="gender" id="gender" class="form-control col-md-7 col-xs-12" data-validate-length-range="8,20"
+                                        :value="profile_data.gender"
+                                >
+                                    <option value="x">Не выбран поль</option>
+                                    <option value="m">Мужчина</option>
+                                    <option value="f">Женщина</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                   for="birthday">Дата рождения<span class="required"></span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <input type="date" id="birthday" name="birthday" class="form-control col-md-7 col-xs-12"
+                                       :value="profile_data.birthday"
                                 >
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="CustomerName">Название <span class="required">*</span>
+                                   for="about">Обо мне<span class="required"></span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                <input type="tel" id="CustomerName" name="CustomerName" required="required"
-                                       data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"
-                                >
+                                <textarea  id="about" name="about" class="form-control col-md-7 col-xs-12" placeholder="Введите текст...">{{profile_data.about}}</textarea>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="CustomerName">Номер комнаты (ИНН) <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <input type="tel" id="CustomerInn" name="CustomerInn" required="required"
-                                       data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"
-                                >
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="Chief">Руководитель подразделения <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <input type="tel" id="Chief" name="Chief" required="required"
-                                       data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"
-                                >
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="Value">Ежемесячная плата за линию <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <input type="tel" id="Value" name="Value" required="required"
-                                       data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"
-                                >
-                            </div>
-                        </div>
-
 
                         <div class="ln_solid"></div>
                         <div class="form-group">
@@ -157,10 +161,8 @@
             async send(e) {
                 e.preventDefault();
                 const form = $('#sendForm').serializeArray();
-                Object.keys(form).map((key, index) => this.formData[form[key]['name']] = form[key]['value']);
-                await axios.post('/home/profile/update', this.formData).then(res => (res.data.status) ?
-                    window.location.reload()
-                    : alert('Ошибка! ', res.data.mess))
+                Object.keys(form).map((key, index) => key !== 'file' ? this.formData[form[key]['name']] = form[key]['value'] : null);
+                await axios.post(API.userUpdate, this.formData).then(({data}) => data.updated ? window.location.reload() : alert('Ошибка сервера'));
             },
 
             async avatarChange(e) {
@@ -168,7 +170,7 @@
                 avatar.append('avatar', e.target.files[0]);
 
                 if (e.target.files && e.target.files[0])
-                    await axios.post(API.userAvatar, avatar).then(({data}) => {
+                    await axios.post(API.userUpdateAvatar, avatar).then(({data}) => {
                         data.img ?  this.profile_data.avatar = data.img : alert('Запрос обновление картинки произошла сбой')
                     })
             },

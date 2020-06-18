@@ -18,12 +18,16 @@ Route::group(['prefix' => 'register'], function () {
 });
 
 
-
-
 Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
+
+    Route::group(['prefix' => 'home'], function () {
+        Route::get('/', 'HomeController@homedata');
+    });
+
     Route::group(['prefix' => 'user'], function () {
         Route::get('/', 'UserController@get');
         Route::post('update/avatar', 'UserController@updateAvatar');
+        Route::post('update', 'UserController@update');
     });
 
     Route::group(['prefix' => 'email'], function () {

@@ -26,9 +26,17 @@ class HomeController extends Controller
      *
      * @return Renderable
      */
+
+
+    public function homedata()
+    {
+        return $this->json(['homedata' => 'isDataHome']);
+    }
+
+
     public function index()
     {
-        return $this->pager( 'profile', 'Профиль', true);
+        return $this->pager( 'home', 'Главная', true);
     }
 
 

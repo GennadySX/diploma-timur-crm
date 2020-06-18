@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('avatar')->default('/uploads/user.png')->nullable();
-            $table->enum('role', ['admin', 'ceo', 'client', 'employee'])->default('employee');
+            $table->enum('role', [ 'employee', 'client','ceo','admin'])->default('employee');
             //
             $table->string('firstName');
             $table->string('lastName');
             $table->string('middleName')->nullable();
-            $table->enum('gender', ['x', 'm', 'w'])->default('x');
+            $table->enum('gender', ['x', 'm', 'f'])->default('x');
             $table->date('birthday')->nullable();
             $table->text('about')->nullable();
             $table->rememberToken();

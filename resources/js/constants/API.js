@@ -6,8 +6,10 @@ export const API = {
     companyList: '/x/register/companies',
 
     //with middleware
+    home: '/x/s/home',
     user: '/x/s/user',
-    userAvatar: '/x/s/user/update/avatar',
+    userUpdate: '/x/s/user/update',
+    userUpdateAvatar: '/x/s/user/update/avatar',
 
 
 }

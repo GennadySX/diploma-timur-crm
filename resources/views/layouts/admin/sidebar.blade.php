@@ -1,7 +1,7 @@
 <!-- sidebar menu -->
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
-        <menubar> </menubar>
+       <menubar-{{\Illuminate\Support\Facades\Auth::user()->role}}> </menubar-{{\Illuminate\Support\Facades\Auth::user()->role}}>
 
 </div>
 <!-- /menu footer buttons -->

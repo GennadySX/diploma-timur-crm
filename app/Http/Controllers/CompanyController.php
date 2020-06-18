@@ -20,6 +20,9 @@ class CompanyController extends Controller
         return $this->json(['company' => Company::where('id', $id)->first()]);
     }
 
+    public function companies() {
+        return $this->pager('company', 'Компании', false);
+    }
 
     public function create(Request $request, Company $company)
     {

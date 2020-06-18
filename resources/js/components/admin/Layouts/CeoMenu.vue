@@ -8,7 +8,7 @@
             </div>
             <div class="profile_info " @click="clickIt($event)">
                 <h2>{{firstName}} {{lastName}}</h2>
-                <span>Администратор</span>
+                <span>{{role}}</span>
             </div>
         </div>
         <br/>
@@ -73,6 +73,7 @@
 
 <script>
     import {API} from "../../../constants/API";
+    import {getByRole} from "../../../helpers/roles";
 
     export default {
         name: 'menubar',
@@ -82,7 +83,11 @@
                 user: null,
                 firstName: 'Имя',
                 lastName: 'Фамилия',
+                role: null,
             }
+        },
+        components: {
+            getByRole
         },
         created() {
 
@@ -97,10 +102,11 @@
                         this.user = data.user
                         this.firstName = data.user.firstName;
                         this.lastName = data.user.lastName
+                        this.role = getByRole(data.user.role).title
                     }
                     this.$bus.$emit('user', data.user)
                 })
-            },
+            }
         }
     };
 </script>

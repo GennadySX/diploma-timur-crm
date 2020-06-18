@@ -18,9 +18,9 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
-        return $user->update($request->all()) ?
-            $this->json(['updated' => true, 'mess' => 'Данные пользователя обновились!' ], 202)
-            : $this->json(['updated' => false, 'mess' => 'Данные не соответсвуют для обновления!' ], 204) ;
+        return $user::where('id', Auth::id())->update($request->all()) ?
+            $this->json(['updated' => true, 'mess' => 'Данные пользователя обновились!' ])
+            : $this->json(['updated' => false, 'mess' => 'Данные не соответсвуют для обновления!' ]) ;
     }
 
 
@@ -35,7 +35,6 @@ class UserController extends Controller
     {
         return $this->json(['user' => Auth::user()]);
     }
-
 
 
     public function updateAvatar(Request $request, User $user)
