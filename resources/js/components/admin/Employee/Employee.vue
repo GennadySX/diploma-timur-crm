@@ -1,93 +1,74 @@
 <template>
-    <div class="col-md-12 col-sm-12">
+    <div class="row">
         <div class="x_panel">
-            <div class="x_title">
-                <h2>Daily active users <small>Sessions</small></h2>
-                <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Settings 1</a>
-                            <a class="dropdown-item" href="#">Settings 2</a>
-                        </div>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                <ul class="list-unstyled timeline">
-                    <li>
-                        <div class="block">
-                            <div class="tags">
-                                <a href="" class="tag">
-                                    <span>Entertainment</span>
-                                </a>
+            <div class="x_content d-flex flex-wrap" v-if="list">
+                <div class="col-md-4 profile_details" v-for="(x, index ) in list" :key="index">
+                    <div class="well profile_view">
+                        <div class="">
+                            <h4 class="brief"><i>{{x.company.name}}</i></h4>
+                            <div class="left col-sm-7">
+                                <h2>{{x.user.firstName}} {{x.user.lastName}}</h2>
+                                <p><strong>Должности: </strong>{{x.role.name}}</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-building"></i> Отдел: {{x.department.name}} </li>
+                                </ul>
+                                <p>{{x.user.about}}</p>
                             </div>
-                            <div class="block_content">
-                                <h2 class="title">
-                                    <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                </h2>
-                                <div class="byline">
-                                    <span>13 hours ago</span> by <a>Jane Smith</a>
-                                </div>
-                                <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                                </p>
+                            <div class="right col-sm-5 text-center">
+                                <img :src="x.user.avatar" alt="" class="img-circle img-fluid user-avatar">
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="block">
-                            <div class="tags">
-                                <a href="" class="tag">
-                                    <span>Entertainment</span>
-                                </a>
+                        <div class=" bottom text-center">
+                            <div class=" col-sm-6 emphasis">
                             </div>
-                            <div class="block_content">
-                                <h2 class="title">
-                                    <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                </h2>
-                                <div class="byline">
-                                    <span>13 hours ago</span> by <a>Jane Smith</a>
-                                </div>
-                                <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                                </p>
+                            <div class=" col-sm-6 emphasis">
+                                <button type="button" class="btn btn-success btn-sm"> <i class="fa fa-user">
+                                </i> <i class="fa fa-comments-o"></i> </button>
+                                <button type="button" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-user"> </i>Посмотреть профиль
+                                </button>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="block">
-                            <div class="tags">
-                                <a href="" class="tag">
-                                    <span>Entertainment</span>
-                                </a>
-                            </div>
-                            <div class="block_content">
-                                <h2 class="title">
-                                    <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-                                </h2>
-                                <div class="byline">
-                                    <span>13 hours ago</span> by <a>Jane Smith</a>
-                                </div>
-                                <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
+    import {API} from "../../../constants/API";
+
     export default {
-        props: {
+        props: {},
+        data() {
+            return {
+                list: null
+            }
         },
+        mounted() {
+            this.realizeIt()
+        },
+        methods: {
+            realizeIt() {
+                axios.get(API.employeeList).then(({data}) => {
+                    console.log('employee list is ', data.list)
+                 this.list = data.list
+                });
+            }
+        }
     };
 </script>
+
+
+<style scoped lang="sass">
+    .user-avatar
+        width: 120px
+        height: 120px
+    .profile_view
+        width: 100%
+        padding: 15px
+    .x_content
+        display: flex
+        flex-wrap: wrap
+</style>

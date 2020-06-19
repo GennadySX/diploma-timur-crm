@@ -10,6 +10,8 @@ export const API = {
     user: '/x/s/user',
     userUpdate: '/x/s/user/update',
     userUpdateAvatar: '/x/s/user/update/avatar',
+    employeeList: '/x/s/employee/list',
+    taskList: '/x/s/task/list',
 
 
 }

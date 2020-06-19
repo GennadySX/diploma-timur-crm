@@ -15,4 +15,10 @@ class Tasks extends Model
         'expire_date',
         'description',
     ];
+
+
+    public function team()
+    {
+            return $this->hasMany(UserTask::class, 'task_id', 'id')->with('user');
+    }
 }

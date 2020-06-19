@@ -26,7 +26,6 @@
                 <li><a><i class="fa fa-bookmark"></i> Клиенты <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="/home/companies">Компании</a></li>
-                        <li><a href="/home/manager">Менеджеры</a></li>
                     </ul>
                 </li>
                 <li><a><i class="fa fa-edit"></i> Задачи <span class="fa fa-chevron-down"></span></a>
@@ -45,15 +44,7 @@
                 </li>
                 <li><a><i class="fa fa-table"></i> Отчеты <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="/home/history-purchase">Истории покупок</a></li>
-                        <li><a href="/home/income">Доходы</a></li>
-                        <li><a href="/home/expense">Расходы</a></li>
-                    </ul>
-                </li>
-                <li><a><i class="fa  fa-shopping-bag"></i> Тарифные планы <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="/home/tariff/active">Активные тарифы</a></li>
-                        <li><a href="/home/tariff/archive">Архивные планы</a></li>
+                        <li><a href="/home/income">Бюджет</a></li>
                     </ul>
                 </li>
 
@@ -62,8 +53,6 @@
         <h3>Параметры</h3>
         <ul class="nav side-menu">
             <li><a href="/home/profile"><i class="fa fa-user"></i> Профиль </a></li>
-            <li><a href="/home/partner"><i class="fa fa-users"></i> Стать партнером </a></li>
-            <li><a href="/home/subscription"><i class="fa fa-cart-plus"></i> Моя подписка </a></li>
             <li><a href="/home/help"><i class="fa fa-question-circle"></i> Тех поддержка </a></li>
             <li><a href="/home/about"><i class="fa fa-info-circle"></i> О нас </a></li>
         </ul>

@@ -3,7 +3,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Форма личного данных <small></small></h2>
+                    <h2>Форма личных данных <small></small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="gender">Поль<span class="required"></span>
+                                   for="gender">Пол<span class="required"></span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <select name="gender" id="gender" class="form-control col-md-7 col-xs-12" data-validate-length-range="8,20"

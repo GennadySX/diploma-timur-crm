@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| API Routes
+| X API Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
@@ -13,35 +13,29 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::group(['prefix' => 'register'], function () {
-    Route::get('/companies', 'CompanyController@index');
-});
+Route::get('/register/companies', 'CompanyController@index');
 
 
 Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
-
     Route::group(['prefix' => 'home'], function () {
         Route::get('/', 'HomeController@homedata');
     });
-
     Route::group(['prefix' => 'user'], function () {
         Route::get('/', 'UserController@get');
         Route::post('update/avatar', 'UserController@updateAvatar');
         Route::post('update', 'UserController@update');
     });
-
     Route::group(['prefix' => 'email'], function () {
         Route::get('/', 'EmailerController@index');
         Route::get('by/{id}', 'EmailerController@getBy');
         Route::post('send', 'EmailerController@create');
     });
-
-    Route::group(['prefix' => 'agreements'], function () {
-        Route::get('/', 'AgreementsController@index');
-        Route::get('by/{id}', 'AgreementsController@getBy');
-        Route::post('create', 'AgreementsController@create');
-        Route::post('update', 'AgreementsController@update');
-        Route::delete('delete/{id}', 'AgreementsController@destroy');
+    Route::group(['prefix' => 'employee'], function () {
+        Route::get('list', 'EmployeeController@list');
+        Route::get('by/{id}', 'EmployeeController@getBy');
+        Route::post('create', 'EmployeeController@create');
+        Route::post('update', 'EmployeeController@update');
+        Route::delete('delete/{id}', 'EmployeeController@destroy');
     });
 
     Route::group(['prefix' => 'chat'], function () {
@@ -102,7 +96,7 @@ Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
     });
 
     Route::group(['prefix' => 'task'], function () {
-        Route::get('/', 'TasksController@index');
+        Route::get('list', 'TasksController@list');
         Route::get('by/{id}', 'TasksController@getBy');
         Route::post('create', 'TasksController@create');
         Route::post('update', 'TasksController@update');

@@ -1,6 +1,3 @@
-
-
-
 export const componentList = [
     {
         name: 'login',
@@ -69,6 +66,10 @@ export const componentList = [
     {
         name: 'subscription',
         component: 'admin/Subscription/Subscription',
+    },
+    {
+        name: 'report',
+        component: 'admin/Report/Report',
     }
 
 ]

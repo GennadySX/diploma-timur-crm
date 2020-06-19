@@ -12,21 +12,21 @@ class Employee extends Model
 
     public function role()
     {
-        return $this->hasOne(Role::class, 'role_id');
+        return $this->hasOne(Role::class, 'id', 'role_id');
     }
 
     public function company() {
-        return $this->hasOne(Company::class, 'company_id');
+        return $this->belongsTo(Company::class, 'company_id');
     }
 
     public function department()
     {
-        return $this->hasOne(Department::class, 'department_id');
+        return $this->belongsTo(Department::class, 'department_id');
     }
 
 
     public function user() {
-        return $this->hasOne(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
 

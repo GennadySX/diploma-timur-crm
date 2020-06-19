@@ -85,78 +85,12 @@
                                             <img src="/public/admin/images/img.jpg" class="avatar" alt="Avatar">
                                             <div class="message_date">
                                                 <h3 class="date text-info">24</h3>
-                                                <p class="month">May</p>
+                                                <p class="month">май</p>
                                             </div>
                                             <div class="message_wrapper">
-                                                <h4 class="heading">Desmond Davison</h4>
-                                                <blockquote class="message">Raw denim you probably haven't heard of them
-                                                    jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro
-                                                    keffiyeh dreamcatcher synth.
-                                                </blockquote>
+                                                <h4 class="heading">Петров Игорь</h4>
+                                                <blockquote class="message">Готовлюсь в отпуск.</blockquote>
                                                 <br/>
-                                                <p class="url">
-                                                    <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
-                                                    <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="/public/admin/images/img.jpg" class="avatar" alt="Avatar">
-                                            <div class="message_date">
-                                                <h3 class="date text-error">21</h3>
-                                                <p class="month">May</p>
-                                            </div>
-                                            <div class="message_wrapper">
-                                                <h4 class="heading">Brian Michaels</h4>
-                                                <blockquote class="message">Raw denim you probably haven't heard of them
-                                                    jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro
-                                                    keffiyeh dreamcatcher synth.
-                                                </blockquote>
-                                                <br/>
-                                                <p class="url">
-                                                    <span class="fs1" aria-hidden="true" data-icon=""></span>
-                                                    <a href="#" data-original-title="">Download</a>
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="/public/admin/images/img.jpg" class="avatar" alt="Avatar">
-                                            <div class="message_date">
-                                                <h3 class="date text-info">24</h3>
-                                                <p class="month">May</p>
-                                            </div>
-                                            <div class="message_wrapper">
-                                                <h4 class="heading">Desmond Davison</h4>
-                                                <blockquote class="message">Raw denim you probably haven't heard of them
-                                                    jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro
-                                                    keffiyeh dreamcatcher synth.
-                                                </blockquote>
-                                                <br/>
-                                                <p class="url">
-                                                    <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
-                                                    <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="/public/admin/images/img.jpg" class="avatar" alt="Avatar">
-                                            <div class="message_date">
-                                                <h3 class="date text-error">21</h3>
-                                                <p class="month">May</p>
-                                            </div>
-                                            <div class="message_wrapper">
-                                                <h4 class="heading">Brian Michaels</h4>
-                                                <blockquote class="message">Raw denim you probably haven't heard of them
-                                                    jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro
-                                                    keffiyeh dreamcatcher synth.
-                                                </blockquote>
-                                                <br/>
-                                                <p class="url">
-                                                    <span class="fs1" aria-hidden="true" data-icon=""></span>
-                                                    <a href="#" data-original-title="">Download</a>
-                                                </p>
                                             </div>
                                         </li>
 
@@ -172,18 +106,18 @@
                                         <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Project Name</th>
-                                            <th>Client Company</th>
-                                            <th class="hidden-phone">Hours Spent</th>
-                                            <th>Contribution</th>
+                                            <th>Название</th>
+                                            <th>Клиент</th>
+                                            <th class="hidden-phone">Затрачено часов</th>
+                                            <th>Статус</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>New Company Takeover Review</td>
-                                            <td>Deveint Inc</td>
-                                            <td class="hidden-phone">18</td>
+                                            <td>Сделать отчет за апрель</td>
+                                            <td>Смирнов Олег</td>
+                                            <td class="hidden-phone">5</td>
                                             <td class="vertical-align-mid">
                                                 <div class="progress">
                                                     <div class="progress-bar progress-bar-success"
@@ -193,37 +127,13 @@
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td>New Partner Contracts Consultanci</td>
-                                            <td>Deveint Inc</td>
-                                            <td class="hidden-phone">13</td>
+                                            <td>Консультировать о планах</td>
+                                            <td>Борисов Владимир</td>
+                                            <td class="hidden-phone">1-2</td>
                                             <td class="vertical-align-mid">
                                                 <div class="progress">
                                                     <div class="progress-bar progress-bar-danger"
                                                          data-transitiongoal="15"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Partners and Inverstors report</td>
-                                            <td>Deveint Inc</td>
-                                            <td class="hidden-phone">30</td>
-                                            <td class="vertical-align-mid">
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-success"
-                                                         data-transitiongoal="45"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>New Company Takeover Review</td>
-                                            <td>Deveint Inc</td>
-                                            <td class="hidden-phone">28</td>
-                                            <td class="vertical-align-mid">
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-success"
-                                                         data-transitiongoal="75"></div>
                                                 </div>
                                             </td>
                                         </tr>

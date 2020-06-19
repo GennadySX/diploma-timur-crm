@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        return $this->pager( 'home', 'Главная', true);
+        return $this->pager( 'profile', 'Главная', true);
     }
 
 

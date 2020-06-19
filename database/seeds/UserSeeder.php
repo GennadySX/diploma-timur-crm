@@ -16,6 +16,7 @@ class UserSeeder extends Seeder
         $user->fill([
             'firstName'=> 'Timur',
             'lastName'=> 'Zotov',
+            'role'=> 'admin',
             'email'=> 'admin@mail.com',
             'password'=> bcrypt('adminPass'),
         ])->save();
