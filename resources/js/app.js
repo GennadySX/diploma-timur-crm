@@ -5,11 +5,12 @@
  */
 
 import {componentList} from "./components/index";
+import VModal from 'vue-js-modal'
 
 require('./bootstrap');
 
 window.Vue = require('vue');
-
+window.Vue.use(VModal, {componentName: 'v-modal'})
 
 componentList.forEach(route => {
     Vue.component(route.name, require(`./components/${route.component}`).default);

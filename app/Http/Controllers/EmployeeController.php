@@ -23,6 +23,12 @@ class EmployeeController extends Controller
         return $this->pager('employee', 'Менеджеры', false);
     }
 
+
+    public function clients ()
+    {
+        return $this->pager('employee', 'Клиенты', false);
+    }
+
     public function list()
     {
         return $this->json(['list' => Employee::with('user','role', 'company','department')->take(3)->get()]);

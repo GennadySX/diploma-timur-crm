@@ -35,6 +35,7 @@ Route::group(['prefix' => '/home'], function () {
 
     Route::get('/employees', 'EmployeeController@employees');
     Route::get('/manager', 'EmployeeController@manager');
+    Route::get('/clients', 'EmployeeController@clients');
     Route::get('/departments', 'DepartmentController@departments');
     Route::get('/companies', 'CompanyController@companies');
 

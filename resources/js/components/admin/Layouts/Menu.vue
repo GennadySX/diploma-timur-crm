@@ -23,11 +23,7 @@
                     </ul>
                 </li>
 
-                <li><a><i class="fa fa-bookmark"></i> Клиенты <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="/home/companies">Компании</a></li>
-                    </ul>
-                </li>
+                <li><a href="/home/employees"><i class="fa fa-bookmark"></i> Клиенты </a></li>
                 <li><a><i class="fa fa-edit"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="/home/my-tasks">Мои задачи</a></li>
