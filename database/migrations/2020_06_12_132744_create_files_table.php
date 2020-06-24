@@ -20,6 +20,7 @@ class CreateFilesTable extends Migration
             $table->enum('type', ['picture', 'doc'])->default('picture');
             $table->enum('status', ['public', 'private', 'deleted'])->default('private');
             $table->string('path');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }

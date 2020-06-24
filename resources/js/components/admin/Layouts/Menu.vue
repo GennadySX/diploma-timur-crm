@@ -19,23 +19,19 @@
                     <a><i class="fa fa-home"></i> Главный <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="/home/employees">Сотрудники</a></li>
-                        <li><a href="/home/departments">Отделы</a></li>
+                        <li><a href="/home/clients">Клиенты </a></li>
                     </ul>
                 </li>
-
-                <li><a href="/home/employees"><i class="fa fa-bookmark"></i> Клиенты </a></li>
                 <li><a><i class="fa fa-edit"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="/home/my-tasks">Мои задачи</a></li>
-                        <li><a href="/home/my-team">Комманда</a></li>
                         <li><a href="/home/task-archive">Архив</a></li>
                     </ul>
                 </li>
 
                 <li><a><i class="fa fa-desktop"></i> Общение <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="/home/chat">Чат</a></li>
-                        <li><a href="/home/emailer">E-mail почта</a></li>
+                        <li><a href="/home/chat">E-mail почта</a></li>
                     </ul>
                 </li>
                 <li><a><i class="fa fa-table"></i> Отчеты <span class="fa fa-chevron-down"></span></a>

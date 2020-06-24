@@ -9,9 +9,11 @@ class Files extends Model
     //
     protected $fillable = [
         'user_id',
-        'model',
+        'model_type',
+        'model_id',
         'type',
         'status',
+        'name',
         'path',
     ];
 }

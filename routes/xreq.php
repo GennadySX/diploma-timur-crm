@@ -97,10 +97,14 @@ Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
 
     Route::group(['prefix' => 'task'], function () {
         Route::get('list', 'TasksController@list');
+        Route::get('archive', 'TasksController@archiveList');
+        Route::post('addUser', 'TasksController@addUser');
+        Route::post('removeUser', 'TasksController@removeUser');
         Route::get('by/{id}', 'TasksController@getBy');
         Route::post('create', 'TasksController@create');
+        Route::post('finish', 'TasksController@finishIt');
         Route::post('update', 'TasksController@update');
-        Route::delete('delete/{id}', 'TasksController@destroy');
+        Route::get('delete/{id}', 'TasksController@destroy');
     });
 
     Route::group(['prefix' => 'task-status'], function () {

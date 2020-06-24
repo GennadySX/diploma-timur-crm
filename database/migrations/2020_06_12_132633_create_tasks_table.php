@@ -21,6 +21,7 @@ class CreateTasksTable extends Migration
             $table->enum('status', ['s', 't', 'e', 'p'])->default('p');
             $table->date('expire_date')->nullable();
             $table->text('description')->nullable();
+            $table->text('name')->nullable();
             $table->timestamps();
         });
     }

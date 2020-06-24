@@ -3,12 +3,12 @@
         <div class="col-md-12">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter"
                     @click="show">
-                Добавить нового сотрудника
+                Добавить нового клиента
             </button>
             <v-modal name="client">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Создать аккаунт нового сотрудника</h2>
+                        <h2>Новая клиент</h2>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">

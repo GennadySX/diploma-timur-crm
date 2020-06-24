@@ -45,7 +45,7 @@
 
                             <li class="m-top-xs">
                                 <i class="fa fa-building user-profile-icon"></i>
-                                <a href="http://cg-eshield.ru/" target="_blank">ЭнергоЩит</a>
+                                <a href="http://cg-eshield.ru/" target="_blank">Энерго Щит</a>
                             </li>
                         </ul>
                         <br/>
@@ -85,7 +85,7 @@
                                             <img src="/public/admin/images/img.jpg" class="avatar" alt="Avatar">
                                             <div class="message_date">
                                                 <h3 class="date text-info">24</h3>
-                                                <p class="month">май</p>
+                                                <p class="month">Июня</p>
                                             </div>
                                             <div class="message_wrapper">
                                                 <h4 class="heading">Петров Игорь</h4>
@@ -129,7 +129,7 @@
                                             <td>2</td>
                                             <td>Консультировать о планах</td>
                                             <td>Борисов Владимир</td>
-                                            <td class="hidden-phone">1-2</td>
+                                            <td class="hidden-phone">2</td>
                                             <td class="vertical-align-mid">
                                                 <div class="progress">
                                                     <div class="progress-bar progress-bar-danger"

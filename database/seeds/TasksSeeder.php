@@ -16,11 +16,12 @@ class TasksSeeder extends Seeder
             $task = new \App\Tasks();
             $task->fill([
                 'creator_id' => $faker->numberBetween(1, 15),
+                'name' =>  $faker->firstName,
                 'cost' =>  $faker->numberBetween(450, 45000),
                 'priority' => $faker->randomElement(['a', 'b', 'c']),
                 'status' => $faker->randomElement(['s', 't', 'e', 'p']),
                 'expire_date' => $faker->date('2020-07-15', '2020-09-04'),
-                'description' => 'text is ...'
+                'description' => $faker->text(150)
             ])->save();
         }
     }

@@ -24,6 +24,7 @@ $factory->define(User::class, function (Faker $faker) {
         'middleName' => $faker->lastName,
         'about' => $faker->text(150),
         'email' => $faker->unique()->safeEmail,
+        'avatar' => '/uploads/user-'.$faker->numberBetween(1, 9).'.jpg',
         'email_verified_at' => now(),
         'password' => bcrypt('unlockdev'),
         'remember_token' => Str::random(10),

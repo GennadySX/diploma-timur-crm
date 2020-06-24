@@ -12,6 +12,13 @@ export const API = {
     userUpdateAvatar: '/x/s/user/update/avatar',
     employeeList: '/x/s/employee/list',
     taskList: '/x/s/task/list',
+    taskListArchive: '/x/s/task/archive',
+    taskAddUser: '/x/s/task/addUser',
+    taskRemoveUser: '/x/s/task/removeUser',
+    newTask: '/x/s/task/create',
+    taskFinish: '/x/s/task/finish',
+    taskRemove: '/x/s/task/delete/',
+    fileCreate: '/x/s/files/create',
 
 
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Document;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
 {
@@ -23,9 +24,12 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, Document $document)
     {
         //
+        $file = Storage::put('/public',$request->file('file'));
+
+
     }
 
     /**

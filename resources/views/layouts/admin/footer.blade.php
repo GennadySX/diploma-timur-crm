@@ -58,7 +58,7 @@
 <script src="{{asset('admin/dash//vendors/raphael/raphael.min.js')}}"></script>
 <script src="{{asset('admin/dash/vendors/morris.js/morris.min.js')}}"></script>
 <script src="{{asset('admin/dash/vendors/echarts/dist/echarts.min.js')}}"></script>
-
+<script src="{{asset('admin/dash/vendors/dropzone/dist/min/dropzone.min.js')}}"></script>
 
 
 <!-- Custom Theme Scripts -->

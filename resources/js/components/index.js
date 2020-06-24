@@ -48,6 +48,10 @@ export const componentList = [
         component: 'admin/Employee/Employee',
     },
     {
+        name: 'client',
+        component: 'admin/Employee/Client',
+    },
+    {
         name: 'help',
         component: 'admin/Help/Help',
     },
@@ -62,6 +66,10 @@ export const componentList = [
     {
         name: 'task',
         component: 'admin/Task/Task',
+    },
+    {
+        name: 'task-archive',
+        component: 'admin/Task/XTask',
     },
     {
         name: 'subscription',

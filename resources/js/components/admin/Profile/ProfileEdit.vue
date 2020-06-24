@@ -97,7 +97,7 @@
                                 <select name="gender" id="gender" class="form-control col-md-7 col-xs-12" data-validate-length-range="8,20"
                                         :value="profile_data.gender"
                                 >
-                                    <option value="x">Не выбран поль</option>
+                                    <option value="x">Выбирите пол</option>
                                     <option value="m">Мужчина</option>
                                     <option value="f">Женщина</option>
                                 </select>
@@ -129,7 +129,7 @@
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                 <a href="/dashboard">
                                     <button type="submit" class="btn btn-success send_profile" @click="send($event)">
-                                        сохранить
+                                        Сохранить
                                     </button>
                                 </a>
 

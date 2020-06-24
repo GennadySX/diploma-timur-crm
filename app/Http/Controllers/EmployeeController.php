@@ -26,7 +26,7 @@ class EmployeeController extends Controller
 
     public function clients ()
     {
-        return $this->pager('employee', 'Клиенты', false);
+        return $this->pager('client', 'Клиенты', false);
     }
 
     public function list()

@@ -14,6 +14,7 @@ class Tasks extends Model
         'status',
         'expire_date',
         'description',
+        'creator_id'
     ];
 
 
@@ -21,4 +22,11 @@ class Tasks extends Model
     {
             return $this->hasMany(UserTask::class, 'task_id', 'id')->with('user');
     }
+
+
+    public function file()
+    {
+        return $this->morphMany(Files::class, 'model');
+    }
+
 }

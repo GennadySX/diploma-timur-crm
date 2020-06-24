@@ -51,7 +51,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>E-mail почта уже зарегистрована или ваша почта не соответсвует по правила нашей конфидентиальности</strong>
+                                        <strong>E-mail почта уже зарегистрована или ваша почта не соответсвует по правилам нашей конфидентиальности</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -65,14 +65,14 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Пароль не должна быть меньше 6 символ и совпадать с подтвержденной пароли</strong>
+                                        <strong>Пароль не должнен быть меньше 6 символов и  должен совпадать с подтвержденным паролем</strong>
                                     </span>
                                 @enderror
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Подтверждения пароли</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Подтверждения пароля</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -82,7 +82,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                   Зарегистроваться
+                                   Зарегистрироваться
                                 </button>
                             </div>
                         </div>
