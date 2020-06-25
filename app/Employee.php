@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     //
-    protected $fillable = ['user_id', 'company_id', 'role_id', 'department_id'];
+    protected $fillable = ['user_id', 'company_id', 'role_id', 'department_id', 'password'];
 
 
     public function role()

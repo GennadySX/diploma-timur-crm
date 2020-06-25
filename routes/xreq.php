@@ -27,6 +27,8 @@ Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
     });
     Route::group(['prefix' => 'email'], function () {
         Route::get('/', 'EmailerController@index');
+        Route::get('list', 'EmailerController@list');
+        Route::post('create', 'EmailerController@create');
         Route::get('by/{id}', 'EmailerController@getBy');
         Route::post('send', 'EmailerController@create');
     });
@@ -35,7 +37,7 @@ Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
         Route::get('by/{id}', 'EmployeeController@getBy');
         Route::post('create', 'EmployeeController@create');
         Route::post('update', 'EmployeeController@update');
-        Route::delete('delete/{id}', 'EmployeeController@destroy');
+        Route::get('delete/{id}', 'EmployeeController@destroy');
     });
 
     Route::group(['prefix' => 'chat'], function () {
@@ -44,6 +46,15 @@ Route::group(['prefix' => 's', 'middleware' => 'auth'], function () {
         Route::post('create', 'ChatController@create');
         Route::post('update', 'ChatController@update');
         Route::delete('delete/{id}', 'ChatController@destroy');
+    });
+
+
+    Route::group(['prefix' => 'client'], function () {
+        Route::get('/', 'ClientController@index');
+        Route::get('list', 'ClientController@list');
+        Route::post('create', 'ClientController@create');
+        Route::post('update', 'ClientController@update');
+        Route::get('delete/{id}', 'ClientController@destroy');
     });
 
     Route::group(['prefix' => 'department'], function () {

@@ -17,7 +17,7 @@ class SubscriptionSeeder extends Seeder
             $subscription = new \App\Subscription();
             $subscription->fill([
                 'tariff_id' => $faker->numberBetween(1, 4),
-                'company_id'=> $i
+                'company_id'=>  1
             ])->save();
         }
     }

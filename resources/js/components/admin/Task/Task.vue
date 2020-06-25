@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter"
                     @click="show()">
-                Создать новый
+                Добавить задачу
             </button>
 
             <v-modal name="task">
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Приоритетность</label>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Приоритет</label>
                                 <div class="col-md-9 col-sm-9 col-xs-9">
                                     <select name="proirity" class="form-control " value="a" v-model="proirity">
                                         <option value="a" class="text-danger font-weight-bold" selected>Срочно</option>
@@ -37,16 +37,7 @@
                                         <option value="c">Не срочно</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-3">Статус</label>
-                                <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <select name="status" id="s" class="form-control " value="p" v-model="status">
-                                        <option value="p" class="text-danger font-weight-bold" selected>Активно</option>
-                                        <option value="s">Отложено</option>
-                                        <option value="e">Не активно</option>
-                                    </select>
-                                </div>
+
                             </div>
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-3">Дата окончания</label>
@@ -85,7 +76,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <h3 class="text-center">Вы действительно хотите убрать исполнителя ?</h3>
+                        <h3 class="text-center">Вы действительно хотите убрать исполнителя?</h3>
                         <br/>
 
                         <div class="col-12 d-flex justify-content-around text-center">
@@ -103,7 +94,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <h3 class="text-center">Вы действительно хотите удалить задачу ?</h3>
+                        <h3 class="text-center">Вы действительно хотите удалить задачу?</h3>
                         <br/>
 
                         <div class="col-12 d-flex justify-content-around text-center">
@@ -183,7 +174,7 @@
                             <th style="width: 1%">#</th>
                             <th style="width: 20%">Название</th>
                             <th class="text-center">Стоимость</th>
-                            <th class="text-center">Приоритетность</th>
+                            <th class="text-center">Приоритет</th>
                             <th>Испольнители</th>
                             <th>Статус прогресса</th>
                             <th class="text-center">Выберете действие</th>

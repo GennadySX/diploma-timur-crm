@@ -4,111 +4,22 @@
         <div class="col-md-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2><small>User Mail</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Settings 1</a>
-                                <a class="dropdown-item" href="#">Settings 2</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                    </ul>
+
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
                     <div class="row">
                         <div class="col-sm-3 mail_list_column">
-                            <button id="compose" class="btn btn-sm btn-success btn-block" type="button" @click="show()">COMPOSE</button>
-                            <a href="#">
+                            <button id="compose" class="btn btn-sm btn-success btn-block" type="button" @click="show()">
+                                Написать
+                            </button>
+                            <a href="#" v-if="list" v-for="(email, index) in list" @click="currentMail = email">
                                 <div class="mail_list">
-                                    <div class="left">
-                                        <i class="fa fa-circle"></i> <i class="fa fa-edit"></i>
+                                    <div class="left"><i class="fa fa-edit"></i>
                                     </div>
                                     <div class="right">
-                                        <h3>Dennis Mugo <small>3.00 PM</small></h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <div class="right">
-                                        <h3>Jane Nobert <small>4.09 PM</small></h3>
-                                        <p><span class="badge">To</span> Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        <i class="fa fa-circle-o"></i><i class="fa fa-paperclip"></i>
-                                    </div>
-                                    <div class="right">
-                                        <h3>Musimbi Anne <small>4.09 PM</small></h3>
-                                        <p><span class="badge">CC</span> Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        <i class="fa fa-paperclip"></i>
-                                    </div>
-                                    <div class="right">
-                                        <h3>Jon Dibbs <small>4.09 PM</small></h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        .
-                                    </div>
-                                    <div class="right">
-                                        <h3>Debbis & Raymond <small>4.09 PM</small></h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        .
-                                    </div>
-                                    <div class="right">
-                                        <h3>Debbis & Raymond <small>4.09 PM</small></h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        <i class="fa fa-circle"></i> <i class="fa fa-edit"></i>
-                                    </div>
-                                    <div class="right">
-                                        <h3>Dennis Mugo <small>3.00 PM</small></h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="mail_list">
-                                    <div class="left">
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <div class="right">
-                                        <h3>Jane Nobert <small>4.09 PM</small></h3>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                                        <h3>{{email.name}} <small>{{getDate(email.created_at)}}</small></h3>
+                                        <p>{{email.message.toString()}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -116,103 +27,27 @@
                         <!-- /MAIL LIST -->
 
                         <!-- CONTENT MAIL -->
-                        <div class="col-sm-9 mail_view">
+                        <div class="col-sm-9 mail_view" v-if="currentMail">
                             <div class="inbox-body">
                                 <div class="mail_heading row">
-                                    <div class="col-md-8">
-                                        <div class="btn-group">
-                                            <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-reply"></i> Reply</button>
-                                            <button class="btn btn-sm btn-default" type="button"  data-placement="top" data-toggle="tooltip" data-original-title="Forward"><i class="fa fa-share"></i></button>
-                                            <button class="btn btn-sm btn-default" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Print"><i class="fa fa-print"></i></button>
-                                            <button class="btn btn-sm btn-default" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Trash"><i class="fa fa-trash-o"></i></button>
-                                        </div>
+                                    <div class="col-md-12">
+                                        <strong>Кому: </strong> {{currentMail.name}}
+                                        <span>({{currentMail.email}})</span>
                                     </div>
-                                    <div class="col-md-4 text-right">
-                                        <p class="date"> 8:02 PM 12 FEB 2014</p>
+                                    <div class="col-md-4 ">
+                                        <p class="date"> {{getDate(currentMail.created_at)}}</p>
                                     </div>
                                     <div class="col-md-12">
-                                        <h4> Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum.</h4>
+                                        <h4>{{currentMail.subject}}</h4>
                                     </div>
                                 </div>
                                 <div class="sender-info">
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <strong>Jon Doe</strong>
-                                            <span>(jon.doe@gmail.com)</span> to
-                                            <strong>me</strong>
-                                            <a class="sender-dropdown"><i class="fa fa-chevron-down"></i></a>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="view-mail">
-                                    <p>Riusmod tempor incididunt ut labor erem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                        mollit anim id est laborum.</p>
-                                    <p>Modesed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                                <div class="attachment">
-                                    <p>
-                                        <span><i class="fa fa-paperclip"></i> 3 attachments — </span>
-                                        <a href="#">Download all attachments</a> |
-                                        <a href="#">View all images</a>
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            <a href="#" class="atch-thumb">
-                                                <img src="/public/admin/images/inbox.png" alt="img" />
-                                            </a>
-
-                                            <div class="file-name">
-                                                image-name.jpg
-                                            </div>
-                                            <span>12KB</span>
-
-
-                                            <div class="links">
-                                                <a href="#">View</a> -
-                                                <a href="#">Download</a>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <a href="#" class="atch-thumb">
-                                                <img src="/public/admin/images/inbox.png" alt="img" />
-                                            </a>
-
-                                            <div class="file-name">
-                                                img_name.jpg
-                                            </div>
-                                            <span>40KB</span>
-
-                                            <div class="links">
-                                                <a href="#">View</a> -
-                                                <a href="#">Download</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="atch-thumb">
-                                                <img src="/public/admin/images/inbox.png" alt="img" />
-                                            </a>
-
-                                            <div class="file-name">
-                                                img_name.jpg
-                                            </div>
-                                            <span>30KB</span>
-
-                                            <div class="links">
-                                                <a href="#">View</a> -
-                                                <a href="#">Download</a>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                                <div class="btn-group">
-                                    <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-reply"></i> Reply</button>
-                                    <button class="btn btn-sm btn-default" type="button"  data-placement="top" data-toggle="tooltip" data-original-title="Forward"><i class="fa fa-share"></i></button>
-                                    <button class="btn btn-sm btn-default" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Print"><i class="fa fa-print"></i></button>
-                                    <button class="btn btn-sm btn-default" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Trash"><i class="fa fa-trash-o"></i></button>
+                                    <p>{{currentMail.message}}</p>
                                 </div>
                             </div>
 
@@ -230,32 +65,39 @@
                 </div>
                 <div class="x_content">
                     <br/>
-                    <form class="form-horizontal form-label-left">
+                    <form class="form-horizontal form-label-left" id="sendEmailForm">
 
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3 col-xs-3">Кому</label>
                             <div class="col-md-9 col-sm-9 col-xs-9">
-                                <input type="text" class="form-control" placeholder="пр. johndoe@mail.com" >
+                                <input type="text" class="form-control" placeholder="пр. Андрей Николаев" name="name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3">E-mail*</label>
+                            <div class="col-md-9 col-sm-9 col-xs-9">
+                                <input type="text" class="form-control" placeholder="пр. johndoe@mail.com" name="email">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3 col-xs-3">Тема</label>
                             <div class="col-md-9 col-sm-9 col-xs-9">
-                                <input type="number" class="form-control" placeholder="пр. Обсуждение проекта" >
+                                <input type="text" class="form-control" placeholder="пр. Обсуждение проекта" name="subject">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-3 col-sm-3 col-xs-3">Сообщение</label>
                             <div class="col-md-9 col-sm-9 col-xs-9">
-                                <textarea type="text" class="form-control" rows="5" placeholder="Введите текст сообщения"></textarea>
+                                <textarea class="form-control" rows="5"
+                                          placeholder="Введите текст сообщения" name="message"></textarea>
                             </div>
                         </div>
                         <div class="ln_solid"></div>
 
                         <div class="form-group row ">
                             <div class="col-md-12 offset-md-3 bottom-content">
-                                <button type="submit" class="btn btn-success">Отправить</button>
-                                <a  class="btn btn-default" @click="hide()">Отменить</a>
+                                <button type="submit" class="btn btn-success" @click="sendMail('#sendEmailForm')">Отправить</button>
+                                <a class="btn btn-default" @click="hide()">Отменить</a>
                             </div>
                         </div>
                     </form>
@@ -267,20 +109,50 @@
 </template>
 
 <script>
+    import {API} from "../../../constants/API";
+
     export default {
-        props: {
-        },
+        props: {},
         data() {
             return {
-
+                list: [],
+                currentMail: null
             }
         },
+        created() {
+           this.realizeIt()
+        },
         methods: {
+            realizeIt() {
+                axios.get(API.emailList).then(({data}) => {
+                    console.log('employee list is ', data.list)
+                    this.list = data.list
+                });
+            },
+            sendMail(form) {
+                axios.post(API.emailCreate, $(form).serialize()).then(({data}) => {
+                    console.log('email result', data)
+                    if (data.email) {
+                        this.list = [data.email, ...this.list]
+                    }
+                })//.catch(e => alert('Ошибка при отправки почты'));
+            },
             show() {
                 this.$modal.show('compose');
             },
             hide() {
                 this.$modal.hide('compose');
+            },
+            getDate(date){
+                const d = new Date(date)
+                return `${this.checkOne(d.getHours())}:${this.checkOne(d.getMinutes())} | ${this.checkOne(d.getDate())}.${this.checkOne(d.getMonth()+1)}.${d.getFullYear()} `
+            },
+            checkOne(is) {
+                if (is < 10 ) {
+                    return `0${is}`
+                } else {
+                    return is
+                }
             }
         }
     };

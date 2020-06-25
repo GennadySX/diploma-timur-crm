@@ -12,13 +12,13 @@ class EmployeeSeeder extends Seeder
     public function run(Faker $faker)
     {
         //
-        for ($i =1; $i<= 15; $i++) {
+        for ($i =1; $i<= 6; $i++) {
             $employee = new \App\Employee();
             $employee->fill([
                 'user_id' => $i,
-                'company_id' => $faker->numberBetween(1,10),
+                'company_id' => 1,
                 'role_id' => $faker->numberBetween(1,9),
-                'department_id' => $faker->numberBetween(1,10)
+                'department_id' =>  1
             ])->save();
         }
 

@@ -7,6 +7,7 @@ use App\Mail\Mailer;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class EmailerController extends Controller
@@ -21,73 +22,25 @@ class EmailerController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
+    public function list() {
+        return $this->json(['list' => Emailer::where('sender_id', Auth::id())->with('user')->orderBy('created_at', 'desc')->get()]);
+    }
+
+
     public function create(Request $request, Emailer $emailer)
     {
-        if ($emailer->fill($request->all())->save() && $emailer->id) {
-            Mail::send(new Mailer($request->message, $request->subject, User::where('id', $request->receiver_id)->first()->email));
-            return $this->json(['send' => true]);
+        if ($emailer->fill([
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+            'sender_id' => Auth::id(),
+            ])->save() && $emailer->id) {
+            Mail::send(new Mailer($request->message, $request->subject, $request->email));
+            return $this->json(['send' => true, 'email' => Emailer::where('id', $emailer->id)->first()]);
         }
-        return  $this->json(['err' => 'email not sent'], 200, false);
+        return  $this->json(['err' => 'email not sent'], 204, false);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param Emailer $emailer
-     * @return Response
-     */
-    public function show(Emailer $emailer)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Emailer $emailer
-     * @return Response
-     */
-    public function edit(Emailer $emailer)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param Emailer $emailer
-     * @return Response
-     */
-    public function update(Request $request, Emailer $emailer)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Emailer $emailer
-     * @return Response
-     */
-    public function destroy(Emailer $emailer)
-    {
-        //
-    }
 }

@@ -15,28 +15,17 @@
         <br/>
             <h3>Меню</h3>
             <ul class="nav side-menu">
-                <li>
-                    <a><i class="fa fa-home"></i> Главный <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="/home/my-tasks">Мои задачи</a></li>
-                        <li><a href="/home/departments">Архив задачи</a></li>
-                    </ul>
-                </li>
-                <li><a href="/home/companies"><i class="fa fa-comments-o"></i> Чат </a> </li>
-                <li><a><i class="fa fa-building"></i> Моя компания <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="/home/companies">Отделы</a></li>
-                        <li><a href="/home/manager">Менеджеры</a></li>
-                        <li><a href="/home/employees">Сотрудники</a></li>
-                    </ul>
-                </li>
+                <li><a href="/home/my-tasks"><i class="fa fa-edit"></i> Задачи </a>
+                <li><a><i class="fa fa-bookmark"></i> Клиенты <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-bookmark"></i> Сотрудники <span class="fa fa-chevron-down"></span></a></li>
+                <li><a href="/home/chat"><i class="fa fa-comments-o"></i> Чат </a> </li>
             </ul>
         <br/><br/>
         <h3>Параметры</h3>
         <ul class="nav side-menu">
             <li><a href="/home/profile"><i class="fa fa-user"></i> Профиль </a></li>
             <li><a href="/home/help"><i class="fa fa-question-circle"></i> Тех поддержка </a></li>
-            <li><a href="/home/about"><i class="fa fa-info-circle"></i> О нас </a></li>
+            <li><a href="/home/about"><i class="fa fa-info-circle"></i> Информация </a></li>
         </ul>
 
         </div>

@@ -90,8 +90,8 @@ class WFinish extends Migration
         Schema::table('emailers', function (Blueprint $table) {
             $table->foreign('sender_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('receiver_id')->references('id')->on('users')
-                ->onDelete('cascade')->onUpdate('cascade');
+           /* $table->foreign('receiver_id')->references('id')->on('users')
+                ->onDelete('cascade')->onUpdate('cascade');*/
         });
 
     }

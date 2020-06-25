@@ -36,7 +36,7 @@
         <ul class="nav side-menu">
             <li><a href="/home/profile"><i class="fa fa-user"></i> Профиль </a></li>
             <li><a href="/home/help"><i class="fa fa-question-circle"></i> Тех поддержка </a></li>
-            <li><a href="/home/about"><i class="fa fa-info-circle"></i> О нас </a></li>
+            <li><a href="/home/about"><i class="fa fa-info-circle"></i> Информация </a></li>
         </ul>
 
     </div>

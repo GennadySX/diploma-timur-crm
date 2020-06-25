@@ -15,7 +15,7 @@ class TasksSeeder extends Seeder
         for ($i =1; $i<15; $i++) {
             $task = new \App\Tasks();
             $task->fill([
-                'creator_id' => $faker->numberBetween(1, 15),
+                'creator_id' => $faker->numberBetween(2, 5),
                 'name' =>  $faker->firstName,
                 'cost' =>  $faker->numberBetween(450, 45000),
                 'priority' => $faker->randomElement(['a', 'b', 'c']),

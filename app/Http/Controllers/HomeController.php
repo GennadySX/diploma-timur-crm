@@ -39,5 +39,8 @@ class HomeController extends Controller
         return $this->pager( 'profile', 'Главная', true);
     }
 
+    public function about() {
+        return $this->pager('about', 'Информация по работе', false);
+    }
 
 }

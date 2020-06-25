@@ -13,7 +13,7 @@
                     </div>
                     <div class="x_content">
                         <br/>
-                        <form class="form-horizontal form-label-left col-md-12">
+                        <form class="form-horizontal form-label-left col-md-12" id="employee-form">
 
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-3">Имя*</label>
@@ -30,10 +30,19 @@
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-3">Отчество</label>
                                 <div class="col-md-9 col-sm-9 col-xs-9">
-                                    <input type="text" class="form-control" name="lastName">
+                                    <input type="text" class="form-control" name="middleName">
                                 </div>
                             </div>
-                            <input type="hidden" class="form-control" name="role" value="client">
+
+                            <div class="form-group row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-3">E-mail*</label>
+                                <div class="col-md-9 col-sm-9 col-xs-9">
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+
+                            <input type="hidden" class="form-control" name="role" value="employee">
+
                             <div class="form-group row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-3">Пароль*</label>
                                 <div class="col-md-9 col-sm-9 col-xs-9">
@@ -50,7 +59,7 @@
 
                             <div class="form-group row ">
                                 <div class="col-md-12 offset-md-3 bottom-content">
-                                    <button type="submit" class="btn btn-success">Сохранить</button>
+                                    <button  class="btn btn-success" @click="createEmployee($event, '#employee-form')">Создать</button>
                                     <a  class="btn btn-default" @click="hide()">Отменить</a>
                                 </div>
                             </div>
@@ -63,11 +72,11 @@
                 <div class="col-md-4 profile_details" v-for="(x, index ) in list" :key="index">
                     <div class="well profile_view">
                         <div class="">
-                            <h4 class="brief"><i>{{x.company.name}}</i></h4>
                             <div class="left col-sm-7">
                                 <h2>{{x.user.firstName}} {{x.user.lastName}}</h2>
                                 <ul class="list-unstyled">
-                                    <li><i class="fa fa-building"></i> Компания: {{x.department.name}} </li>
+                                    <li><i class="fa fa-at"></i> <strong>E-mail:</strong> {{x.user.email}} </li>
+                                    <li><i class="fa fa-lock"></i> <strong>Пароль:</strong> {{x.password}} </li>
                                 </ul>
                             </div>
                             <div class="right col-sm-5 text-center">
@@ -78,10 +87,11 @@
                             <div class=" col-sm-6 emphasis">
                             </div>
                             <div class=" col-sm-6 emphasis">
-                                <button type="button" class="btn btn-success btn-sm"> <i class="fa fa-user">
-                                </i> <i class="fa fa-comments-o"></i> </button>
-                                <button type="button" class="btn btn-primary btn-sm">
-                                    <i class="fa fa-user"> </i>Посмотреть профиль
+
+                                <button
+                                    @click="removeIt( $event, x)"
+                                    class="btn btn-danger btn-sm">
+                                    <i class="fa fa-trash"> </i>
                                 </button>
                             </div>
                         </div>
@@ -112,6 +122,20 @@
                     console.log('employee list is ', data.list)
                  this.list = data.list
                 });
+            },
+            createEmployee(e, form) {
+              e.preventDefault()
+              axios.post(API.employeeCreate,  $(form).serialize()).then(res => {
+                  if (res.data) {
+                    window.location.reload()
+                  }
+              }).catch(e => {
+                  alert('По таким почтой зарегистрован пользователь!')
+              })
+
+            },
+            removeIt(e, employee) {
+                window.location.href = API.employeeRemove+employee.user_id
             },
             show() {
                 this.$modal.show('client');

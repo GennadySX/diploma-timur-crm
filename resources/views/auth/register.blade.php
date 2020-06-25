@@ -51,7 +51,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>E-mail почта уже зарегистрована или ваша почта не соответсвует по правилам нашей конфидентиальности</strong>
+                                        <strong>E-mail почта уже зарегистрирована или Ваша почта не соответсвует правилам нашей конфидициальности</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -65,7 +65,7 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Пароль не должнен быть меньше 6 символов и  должен совпадать с подтвержденным паролем</strong>
+                                        <strong>Пароль должнен быть не меньше 6 символов и должен совпадать с подтвержденным паролем</strong>
                                     </span>
                                 @enderror
                             </div>

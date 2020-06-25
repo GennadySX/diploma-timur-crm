@@ -13,10 +13,10 @@ class DepartmentSeeder extends Seeder
     {
         //
 
-        for ($i =1; $i < 15; $i++) {
+        for ($i =1; $i < 3; $i++) {
             $department = new \App\Department();
             $department->fill([
-                'company_id' => $faker->numberBetween(1, 10),
+                'company_id' => 1,
                 'name' => $faker->streetName,
                 'address' => $faker->address,
             ])->save();

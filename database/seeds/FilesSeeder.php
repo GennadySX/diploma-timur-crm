@@ -19,7 +19,7 @@ class FilesSeeder extends Seeder
 
             $file = new \App\Files();
             $file->fill([
-                'user_id'=> $faker->numberBetween(1, 15),
+                'user_id'=> $faker->numberBetween(2, 5),
                 'model_type' => $is['type'],
                 'model_id' => $is['id'],
                 'type'=> 'picture',

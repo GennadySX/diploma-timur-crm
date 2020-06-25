@@ -13,7 +13,7 @@ class CompanySeeder extends Seeder
     {
         //
 
-        for ($i = 1; $i <= 10; $i++ ) {
+        for ($i = 1; $i <= 2; $i++ ) {
 
             $company = new \App\Company();
             $company->fill([

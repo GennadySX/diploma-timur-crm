@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{asset('admin/dash/images/favicon.ico')}}" type="image/ico"/>
 
-    <title>Yota</title>
+    <title>TimCRM</title>
 
     <!-- Bootstrap -->
     <link href="{{asset('admin/dash/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">

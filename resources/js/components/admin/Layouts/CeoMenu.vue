@@ -65,7 +65,7 @@
             <li><a href="/home/partner"><i class="fa fa-users"></i> Стать партнером </a></li>
             <li><a href="/home/subscription"><i class="fa fa-cart-plus"></i> Моя подписка </a></li>
             <li><a href="/home/help"><i class="fa fa-question-circle"></i> Тех поддержка </a></li>
-            <li><a href="/home/about"><i class="fa fa-info-circle"></i> О нас </a></li>
+            <li><a href="/home/about"><i class="fa fa-info-circle"></i> Информация </a></li>
         </ul>
 
         </div>

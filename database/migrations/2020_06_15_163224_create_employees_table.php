@@ -19,6 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->foreignId('company_id');
             $table->foreignId('role_id');
             $table->foreignId('department_id')->nullable();
+            $table->string('password')->default('noRootCode')->nullable();
             $table->timestamps();
         });
     }

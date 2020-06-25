@@ -16,7 +16,8 @@ class CreateEmailersTable extends Migration
         Schema::create('emailers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('sender_id');
-            $table->foreignId('receiver_id');
+            $table->string('name')->nullable();
+            $table->string('email');
             $table->string('subject')->nullable();
             $table->text('message');
             $table->timestamps();

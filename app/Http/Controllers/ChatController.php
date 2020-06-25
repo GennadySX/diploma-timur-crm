@@ -12,4 +12,9 @@ class ChatController extends Controller
     {
         return $this->pager('email', 'Чат', false);
     }
+
+
+    public function help() {
+        return $this->pager('help', 'Техническая поддержка', false);
+    }
 }

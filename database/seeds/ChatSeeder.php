@@ -17,8 +17,8 @@ class ChatSeeder extends Seeder
         for ($i = 1; $i<=30; $i++) {
             $chat = new \App\Chat();
             $chat->fill([
-                'user_f_id' => $faker->numberBetween(1, 15),
-                'user_s_id' => $faker->numberBetween(1, 15),
+                'user_f_id' => $faker->numberBetween(2, 5),
+                'user_s_id' => $faker->numberBetween(2, 5),
                 'chat' => $this->chatLetter($faker),
             ])->save();
         }

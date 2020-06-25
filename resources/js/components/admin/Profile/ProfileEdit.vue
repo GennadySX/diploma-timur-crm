@@ -117,7 +117,7 @@
 
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                   for="about">Обо мне<span class="required"></span>
+                                   for="about">Расскажите о себе<span class="required"></span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <textarea  id="about" name="about" class="form-control col-md-7 col-xs-12" placeholder="Введите текст...">{{profile_data.about}}</textarea>

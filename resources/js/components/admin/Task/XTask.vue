@@ -30,7 +30,6 @@
                             <th style="width: 1%">#</th>
                             <th style="width: 20%">Название</th>
                             <th class="text-center">Стоимость</th>
-                            <th class="text-center">Приоритетность</th>
                             <th>Испольнители</th>
                             <th>Статус прогресса</th>
                             <th class="text-center">Выберете действие</th>
@@ -47,12 +46,7 @@
                             </td>
                             <td class="text-center">
                                 <strong>{{task.cost}} руб</strong>
-                            </td>
-                            <td class="text-center">
-                                <strong class="text-danger " v-if="task.priority === 'a'">Срочно</strong>
-                                <strong class="text-warning " v-else-if="task.priority === 'b'">Средний</strong>
-                                <strong class="text-primary  " v-else>Не срочно</strong>
-                            </td>
+                         
                             <td>
 
                                 <ul class="list-inline" v-if="task.team">
